@@ -2,11 +2,10 @@
 <p>Here is where table data will go</p>
 
 <table>
-	<% Sites.all.each do |x| %>
+	<% Site.all.each do |x| %>
 		  <tr>
-					<td>something</td>
-				 	<td><%= x.attribute1 %></td>
-					<td><%= x.attribute2 %></td>
+				 	<td><%= x.name %></td>
+					<td><%= x.count %></td>
 			</tr>
 	<% end %>
 </table>

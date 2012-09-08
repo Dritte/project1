@@ -3,7 +3,15 @@ class SitesController < ApplicationController
   end
 	def visit
 		@name = params[:name]
-		foo = Site.new(:name => :name.to_s, :count => 0)
-		foo.save!
+		site= Site.where("name = ?",@name).first
+		if site
+			
+			site.count+=1
+			site.save!
+		else
+			foo = Site.new(:name => params[:name], :count => 1)
+			foo.save!
+
+		end
 	end
 end
