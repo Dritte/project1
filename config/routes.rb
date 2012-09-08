@@ -2,13 +2,15 @@ Project1::Application.routes.draw do
 
 
 
+  resources :sites
+
   get "sites/visit"
 
   get "sites/index"
 	match "sites/index" => "sites#index"
 	match "sites" => "sites#index"
 
-	match "sites/:id/visit" => "sites#visit"
+	match "sites/:name/visit" => "sites#visit"
 
   # The priority is based upon order of creation:
 	# /index"
