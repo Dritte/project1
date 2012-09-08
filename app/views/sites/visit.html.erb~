@@ -1,0 +1,3 @@
+<h1>Sites#visit</h1>
+<p>Find me in app/views/sites/visit.html.erb</p>
+<p><%= @id%></p>

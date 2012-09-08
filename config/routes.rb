@@ -2,11 +2,19 @@ Project1::Application.routes.draw do
 
 
 
+  get "sites/visit"
+
+  get "sites/index"
+	match "sites/index" => "sites#index"
+	match "sites" => "sites#index"
+
+	match "sites/:id/visit" => "sites#visit"
+
   # The priority is based upon order of creation:
 	# /index"
 	
-	get "sites"
-	match "sites" => "sites#index"
+#	get "sites"
+#	match "sites" => "sites#index"
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
