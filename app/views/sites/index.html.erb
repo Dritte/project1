@@ -1,3 +1,12 @@
 <h1>Sites#index</h1>
 <p>Here is where table data will go</p>
 
+<table>
+	<% Sites.all.each do |x| %>
+		  <tr>
+					<td>something</td>
+				 	<td><%= x.attribute1 %></td>
+					<td><%= x.attribute2 %></td>
+			</tr>
+	<% end %>
+</table>
